@@ -1,7 +1,7 @@
 <div align="center">
 <img src="./docs/images/head-cover.png" alt="icon"/>
 
-<h1 align="center">NextChat (ChatGPT Next Web)</h1>
+<h1 align="center">NextChat (ChatGPT Next Web) 新增了支持CFPage部署</h1>
 
 English / [简体中文](./README_CN.md)
 
@@ -34,6 +34,18 @@ One-Click to get a well-designed cross-platform ChatGPT web UI, with GPT3, GPT4 
 ![cover](./docs/images/cover.png)
 
 </div>
+
+修改了cloudflare部署说明及成功部署要点，及同步更新cloudflare-pages多个语言版本的说明
+
+在cloudflare部署前需要修改下面三个文件的runtime才能完成部署
+
+/app/api/config/route.ts
+/app/cors/[...path]/route.ts
+/app/openai/[...path]/route.ts
+将这三个文件内容的export const runtime值修改成edge
+
+例如：export const runtime = "edge";
+
 
 ## Features
 
