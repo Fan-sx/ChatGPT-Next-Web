@@ -39,12 +39,12 @@ One-Click to get a well-designed cross-platform ChatGPT web UI, with GPT3, GPT4 
 
 在cloudflare部署前需要修改下面三个文件的runtime才能完成部署
 
-/app/api/config/route.ts
-/app/cors/[...path]/route.ts
-/app/openai/[...path]/route.ts
+`/app/api/config/route.ts`
+`/app/cors/[...path]/route.ts`
+`/app/openai/[...path]/route.ts`
 将这三个文件内容的export const runtime值修改成edge
 
-例如：export const runtime = "edge";
+例如：`export const runtime = "edge";`
 
 
 ## Features
